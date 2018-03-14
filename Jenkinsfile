@@ -5,7 +5,7 @@ node{
  }
  
  stage('Build'){
-    
+    /* bat "ant -f build-mt.xml" */ /*For windows machines*/
     sh "ant -f build-mt.xml" 
  }
  stage('Send Email'){
