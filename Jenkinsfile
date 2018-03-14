@@ -3,7 +3,10 @@ node{
  stage('Source'){
      git 'https://github.com/devopstrainingblr/Ant-WebProject.git'
   
-      println "Current branch ${env.BRANCH_NAME}"
+      sh 'printenv'
+    sh 'env'
+    sh 'echo $BRANCH_NAME' 
+    sh 'echo $GIT_COMMIT'
  }
  
  stage('Build'){
