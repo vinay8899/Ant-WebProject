@@ -2,11 +2,10 @@
 node{
  stage('Source'){
      git 'https://github.com/devopstrainingblr/Ant-WebProject.git'
-     if (env.BRANCH_NAME == 'master') {
-      stage 'Only on master'
+     def branch = env.BRANCH_NAME
+     if ($BRANCH_NAME == 'master') {
       println 'This happens only on master'
     } else {
-      stage 'Other branches'
       println "Current branch ${env.BRANCH_NAME}"
     }
  }
