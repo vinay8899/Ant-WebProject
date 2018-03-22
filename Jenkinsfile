@@ -6,7 +6,7 @@ try{
     }
    
         stage('build'){
-        sh 'ant'
+        sh 'ant -f build-mt.xml'
     }
      stage('Test'){
       /*  sh 'mvn test' */
