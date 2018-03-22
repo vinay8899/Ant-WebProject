@@ -4,11 +4,17 @@ try{
     stage('Checkout'){
          git branch: 'master', credentialsId: 'bitbucket', url: 'https://github.com/devopstrainingblr/Ant-WebProject.git'
     }
-    stage('Test'){
-        sh 'mvn test'
+   
+        stage('build'){
+        sh 'ant'
+    }
+     stage('Test'){
+      /*  sh 'mvn test' */
+         echo 'test done'
     }
     stage('Package'){
-        sh 'mvn package'
+       /* sh 'mvn package' */
+        echo 'Package done'
     }
     stage('Deploy-dev'){
         echo 'Deployed to dev'
