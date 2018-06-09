@@ -38,6 +38,6 @@ try{
     }
   }
 }catch(error){
-   echo 'Some error' 
+   echo 'Some error occured, Please verify' 
    throw error
 }
