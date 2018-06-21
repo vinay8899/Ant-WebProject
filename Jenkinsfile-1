@@ -3,7 +3,7 @@ stag('build'){
 if (isUnix()){
  sh "mvn package"
 }else{
-bat "mvn package"
+bat "mvn clean package"
 }
 }
 }
