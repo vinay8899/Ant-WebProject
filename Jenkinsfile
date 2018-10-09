@@ -30,7 +30,7 @@ node{
 
 
 	stage('notification'){
-	      mail  to: 'devopstrainingblr@gmail.com', cc: 'devopstrainingblr@gmail.com', bcc: 'devopstrainingblr@gmail.com',from: 'devopstrainingblr@gmail.com', replyTo: 'devopstrainingblr@gmail.com', subject: 'env.PROJECT_NAME - Build # env.BUILD_NUMBER - env.BUILD_STATUS' ,body: 'Buid Done '
+	      mail  to: 'devopstrainingblr@gmail.com', cc: 'devopstrainingblr@gmail.com', bcc: 'devopstrainingblr@gmail.com',from: 'devopstrainingblr@gmail.com', replyTo: 'devopstrainingblr@gmail.com', subject: ${env.JOB_NAME} ${env.PROJECT_NAME} - Build # ${env.BUILD_NUMBER} - ${env.BUILD_STATUS} ,body: 'Buid Done '
   
     
 	   }
