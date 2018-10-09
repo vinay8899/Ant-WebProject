@@ -3,7 +3,7 @@ node{
 
   stage('Checkout') { 
       
-      git credentialsId: '4862c36a-cb75-4ad6-a7dc-dad0abf563c8', url: 'https://github.com/devopstrainingblr/Ant-JavaProject.git', branch: 'master'
+      git credentialsId: '4862c36a-cb75-4ad6-a7dc-dad0abf563c8', url: 'https://github.com/devopstrainingblr/Ant-WebProject.git', branch: 'master'
    }
    
    
