@@ -4,7 +4,12 @@ node{
   stage('Checkout') { 
       
       git credentialsId: '4862c36a-cb75-4ad6-a7dc-dad0abf563c8', url: 'https://github.com/devopstrainingblr/Ant-WebProject.git', branch: 'master'
-   }
+      sh 'echo branch name is:  $env.BRANCH_NAME' 
+    sh 'echo git commit is:  $env.GIT_COMMIT'
+    sh 'echo Build URL  is:  $env.BUILD_URL'
+    sh 'echo JOB_URL  is: $env.JOB_URL'
+  
+  }
    
    
    stage('Build') {
